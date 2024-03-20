@@ -1,5 +1,7 @@
 # Flappy Bird Game
 
+<div class="tenor-gif-embed" data-postid="16194812" data-share-method="host" data-aspect-ratio="1.33333" data-width="100%"><a href="https://tenor.com/view/flappy-bird-flying-bird-video-game-gif-16194812">Flappy Bird Flying GIF</a>from <a href="https://tenor.com/search/flappy+bird-gifs">Flappy Bird GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
 This is a simple implementation of the classic Flappy Bird game using Python and Pygame.
 
 ## How to Play
