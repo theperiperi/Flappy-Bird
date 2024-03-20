@@ -1,6 +1,4 @@
 import pygame
-import sys
-import random
 import os
 from sprites import Bird, Pipe
 from soundboard import play_flap_sound, play_hit_sound, play_point_sound
