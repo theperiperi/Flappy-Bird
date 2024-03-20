@@ -1,6 +1,6 @@
 # Flappy Bird Game
 
-![Flappy Bird](https://i.imgur.com/KfcGvdT.gif)
+![Flappy Bird]([https://i.imgur.com/KfcGvdT.gif](https://tenor.com/bf7aO.gif))
 
 This is a simple implementation of the classic Flappy Bird game using Python and Pygame.
 
