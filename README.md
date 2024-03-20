@@ -1,6 +1,8 @@
 # Flappy Bird Game
 
 This is a simple implementation of the classic Flappy Bird game using Python and Pygame.
+![image](https://github.com/theperiperi/Flappy-Bird/assets/121922820/a30f289c-330f-4ae8-b4ea-ba68072823d1)
+
 
 ## How to Play
 
