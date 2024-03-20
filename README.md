@@ -41,7 +41,7 @@ python main.py
 - `main.py`: Contains the main game loop and logic.
 - `sprites.py`: Defines the Bird and Pipe classes.
 - `soundboard.py`: Manages the game's sound effects.
-- `sprites/`: Contains images used for the bird and pipes.
+- `sprites`: Contains images used for the bird and pipes.
 - `README.md`: The file you are currently reading, providing information about the game.
 
 ## License
