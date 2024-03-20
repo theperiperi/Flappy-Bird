@@ -21,7 +21,7 @@ The objective of the game is to navigate the bird through a series of pipes with
 3. Install the required dependencies using pip:
 ```bash
 pip install pygame
-bash```
+ls -l
 
    
 ## How to Run
