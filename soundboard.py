@@ -4,9 +4,9 @@ import pygame
 pygame.mixer.init()
 
 # Sound Effects
-flap_sound = pygame.mixer.Sound("flap.mp3")
-flappy_bird_hit_sound = pygame.mixer.Sound("flappy_bird_hit.mp3")
-point_sound = pygame.mixer.Sound("point.mp3")
+flap_sound = pygame.mixer.Sound("soundboard\\flap.mp3")
+flappy_bird_hit_sound = pygame.mixer.Sound("soundboard\\flappy_bird_hit.mp3")
+point_sound = pygame.mixer.Sound("soundboard\\point.mp3")
 
 def play_flap_sound():
     flap_sound.play()

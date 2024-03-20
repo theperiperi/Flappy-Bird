@@ -12,7 +12,7 @@ class Bird:
         self.height = 30  # Height without loading the image yet
 
     def load_image(self):
-        self.image = pygame.image.load("bird.png").convert_alpha()
+        self.image = pygame.image.load("sprites\\bird.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (self.width, self.height))
 
     def show(self, screen):
@@ -47,7 +47,7 @@ class Pipe:
         self.passed = False
 
     def load_image(self):
-        self.image = pygame.image.load("pipe.png").convert_alpha()
+        self.image = pygame.image.load("sprites\\pipe.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (self.w, self.h))
 
     def show(self, screen):

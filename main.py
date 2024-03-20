@@ -13,7 +13,7 @@ from soundboard import play_flap_sound, play_hit_sound, play_point_sound
 
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "1"
 
-background_img = pygame.image.load("background.png").convert()
+background_img = pygame.image.load("sprites\\background.png").convert()
 background_img = pygame.transform.scale(background_img, (WIDTH, HEIGHT))
 
 WHITE = (255, 255, 255)
