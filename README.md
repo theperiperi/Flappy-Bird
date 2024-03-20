@@ -2,10 +2,6 @@
 
 This is a simple implementation of the classic Flappy Bird game using Python and Pygame.
 
-<div align="center">
-<img src="https://media.tenor.com/images/4d83e6a32876b5c43eae5c71b3dcf53f/tenor.gif" alt="Flappy Bird" width="400"/>
-</div>
-
 ## How to Play
 
 ### Objective
