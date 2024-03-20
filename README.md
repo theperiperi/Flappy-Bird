@@ -28,8 +28,9 @@ pip install pygame
 
 Navigate to the project directory in your terminal and run the following command:
 
+```bash
 python main.py
-
+```
 
 ## Game Features
 
