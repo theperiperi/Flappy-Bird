@@ -9,6 +9,11 @@ WIDTH, HEIGHT = 400, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Flappy Bird")
 
+# Sound Effects
+flap_sound = pygame.mixer.Sound("flap.mp3")
+flappy_bird_hit_sound = pygame.mixer.Sound("flappy_bird_hit.mp3")
+point_sound = pygame.mixer.Sound("point.mp3")
+
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "1"
 
 background_img = pygame.image.load("background.png").convert()
@@ -35,8 +40,11 @@ def main():
     # High Score
     high_score = 0
 
+    # Flag for playing hit sound only once
+    hit_sound_played = False
+
     def reset_game():
-        nonlocal bird, pipes, score, game_over
+        nonlocal bird, pipes, score, game_over, hit_sound_played
         bird = Bird(WIDTH, HEIGHT)
         bird.load_image()
 
@@ -46,8 +54,15 @@ def main():
 
         score = 0
         game_over = False
+        hit_sound_played = False
 
     def display_game_over(score, high_score):
+        nonlocal hit_sound_played  # Declare as nonlocal to modify the variable from main's scope
+        # Play hit sound only once
+        if not hit_sound_played:
+            flappy_bird_hit_sound.play()
+            hit_sound_played = True
+
         score_text = font.render("Score: " + str(score), True, BLACK)
         screen.blit(score_text, (WIDTH//2 - score_text.get_width()//2, HEIGHT//2))
 
@@ -72,6 +87,7 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if not game_over and event.key == pygame.K_SPACE:
                     bird.jump()
+                    flap_sound.play()
                 elif game_over and event.key == pygame.K_RETURN:
                     reset_game()
 
@@ -87,6 +103,10 @@ def main():
                 if not pipe.passed and pipe.x + pipe.w < bird.x - bird.width // 2:
                     pipe.passed = True
                     score += 10
+
+                    # Play point sound for every 10th point (every multiple of 100)
+                    if score % 100 == 0:
+                        point_sound.play()
 
                 if pipe.offscreen(WIDTH):
                     pipes.remove(pipe)
