@@ -19,8 +19,9 @@ The objective of the game is to navigate the bird through a series of pipes with
   git clone https://github.com/theperiperi/flappy-bird.git
 
 3. Install the required dependencies using pip:
-   
-   pip install pygame
+```bash
+pip install pygame
+
 
    
 ## How to Run
