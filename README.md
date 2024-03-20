@@ -2,7 +2,7 @@
 
 This is a simple implementation of the classic Flappy Bird game using Python and Pygame.## Demo
 <div align="center">
-  <img src="https://github.com/theperiperi/Flappy-Bird/raw/main/assets/121922820/37b92e82-af62-4303-8bd1-5fd76dc14cc5.png" alt="Flappy Bird Image">
+  <img src="https://github.com/theperiperi/Flappy-Bird/raw/main/assets/121922820/37b92e82-af62-4303-8bd1-5fd76dc14cc5.png">
 </div>
 
 
