@@ -8,8 +8,8 @@ class Bird:
         self.velocity = 0
         self.gravity = 0.5
         self.lift = -10
-        self.width = 40  # Width without loading the image yet
-        self.height = 30  # Height without loading the image yet
+        self.width = 30  # Width without loading the image yet
+        self.height = 25 # Height without loading the image yet
 
     def load_image(self):
         self.image = pygame.image.load("sprites\\bird.png").convert_alpha()
