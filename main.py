@@ -3,16 +3,15 @@ import sys
 import random
 import os
 from sprites import Bird, Pipe
+from soundboard import play_flap_sound, play_hit_sound, play_point_sound
 
 pygame.init()
 WIDTH, HEIGHT = 400, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Flappy Bird")
 
-# Sound Effects
-flap_sound = pygame.mixer.Sound("flap.mp3")
-flappy_bird_hit_sound = pygame.mixer.Sound("flappy_bird_hit.mp3")
-point_sound = pygame.mixer.Sound("point.mp3")
+# Import Sound Effects from soundboard.py
+from soundboard import play_flap_sound, play_hit_sound, play_point_sound
 
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "1"
 
@@ -60,7 +59,7 @@ def main():
         nonlocal hit_sound_played  # Declare as nonlocal to modify the variable from main's scope
         # Play hit sound only once
         if not hit_sound_played:
-            flappy_bird_hit_sound.play()
+            play_hit_sound()
             hit_sound_played = True
 
         score_text = font.render("Score: " + str(score), True, BLACK)
@@ -87,7 +86,7 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if not game_over and event.key == pygame.K_SPACE:
                     bird.jump()
-                    flap_sound.play()
+                    play_flap_sound()
                 elif game_over and event.key == pygame.K_RETURN:
                     reset_game()
 
@@ -106,7 +105,7 @@ def main():
 
                     # Play point sound for every 10th point (every multiple of 100)
                     if score % 100 == 0:
-                        point_sound.play()
+                        play_point_sound()
 
                 if pipe.offscreen(WIDTH):
                     pipes.remove(pipe)
